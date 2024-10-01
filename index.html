@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація циклу for...in</title>
+</head>
+<body>
+    <h1>Демонстрація циклу for...in в JavaScript</h1>
+
+    <h2>Інформація про автомобіль:</h2>
+    <ul id="car-info"></ul>
+
+    <script>
+       
+        const car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "червоний"
+        };
+
+        const carInfoList = document.getElementById('car-info');
+        for (let property in car) {
+            let li = document.createElement('li');
+            li.textContent = `${property}: ${car[property]}`; 
+            carInfoList.appendChild(li);
+        }
+    </script>
+</body>
+</html>
